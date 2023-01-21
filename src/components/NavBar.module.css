@@ -1,0 +1,17 @@
+.navBar {
+    width: 60vw;
+    margin-left: auto;
+}
+
+.navBar ul {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 5rem;
+    padding: 2rem;
+    margin: 0;
+    background-color: grey;
+}
+
+.navBar ul li a {
+    text-decoration: none;
+}

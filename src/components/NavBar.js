@@ -1,20 +1,31 @@
 import Link from 'next/link';
 
+import styles from './NavBar.module.css';
+import utilStyles from '../styles/utils.module.css';
+
 const NavBar = () => {
     return (
-        <nav>
+        <nav className={styles.navBar}>
             <ul>
                 <li>
-                    <Link href='/'>Home</Link>
+                    <Link className={utilStyles.navText} href='/'>
+                        Home
+                    </Link>
                 </li>
                 <li>
-                    <Link href='/destination'>Destination</Link>
+                    <Link className={utilStyles.navText} href='/destination'>
+                        Destination
+                    </Link>
                 </li>
                 <li>
-                    <Link href='/crew'>Crew</Link>
+                    <Link className={utilStyles.navText} href='/crew'>
+                        Crew
+                    </Link>
                 </li>
                 <li>
-                    <Link href='/technology'>Technology</Link>
+                    <Link className={utilStyles.navText} href='/technology'>
+                        Technology
+                    </Link>
                 </li>
             </ul>
         </nav>

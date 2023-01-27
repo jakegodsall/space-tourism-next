@@ -16,7 +16,7 @@ const NavBar = () => {
         <>
             <nav
                 className='hidden md:flex w-[60%]
-     items-center justify-between p-4 py-8 bg-[hsl(0, 0%, 100%) / 0.05] backdrop-blur-lg'
+     items-center justify-between p-4 py-8 backdrop-blur-2xl'
             >
                 <ul className='flex w-full justify-between mr-20 font-barlow uppercase text-white'>
                     <li>
@@ -44,8 +44,8 @@ const NavBar = () => {
             <div
                 className={
                     nav
-                        ? 'fixed w-[65%] h-screen right-0 top-0 bg-[hsl(0, 0%, 100%) / 0.05] backdrop-blur-lg ease-in duration-500'
-                        : 'fixed w-[65%] h-screen right-[-100%] top-0 bg-[hsl(0, 0%, 100%) / 0.05] backdrop-blur-lg ease-in duration-500'
+                        ? 'fixed w-[65%] h-screen right-0 top-0  backdrop-blur-2xl ease-in duration-500'
+                        : 'fixed w-[65%] h-screen right-[-100%] top-0  backdrop-blur-2xl ease-in duration-500'
                 }
             >
                 <div className={nav ? 'flex flex-col p-6 h-screen' : 'hidden'}>

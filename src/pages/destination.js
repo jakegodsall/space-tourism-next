@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Head from 'next/head';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import DestinationItem from '@/components/DestinationItem';
 
@@ -8,8 +9,8 @@ const DEST_DATA = [
     {
         name: 'moon',
         images: {
-            png: './assets/destination/image-moon.png',
-            webp: './assets/destination/image-moon.webp',
+            png: '/images/destination/image-moon.png',
+            webp: '/images/destination/image-moon.webp',
         },
         description:
             'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.',
@@ -19,8 +20,8 @@ const DEST_DATA = [
     {
         name: 'mars',
         images: {
-            png: './assets/destination/image-mars.png',
-            webp: './assets/destination/image-mars.webp',
+            png: '/images/destination/image-mars.png',
+            webp: '/images/destination/image-mars.webp',
         },
         description:
             'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!',
@@ -30,8 +31,8 @@ const DEST_DATA = [
     {
         name: 'europa',
         images: {
-            png: './assets/destination/image-europa.png',
-            webp: './assets/destination/image-europa.webp',
+            png: '/images/destination/image-europa.png',
+            webp: '/images/destination/image-europa.webp',
         },
         description:
             'The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.',
@@ -41,8 +42,8 @@ const DEST_DATA = [
     {
         name: 'titan',
         images: {
-            png: './assets/destination/image-titan.png',
-            webp: './assets/destination/image-titan.webp',
+            png: '/images/destination/image-titan.png',
+            webp: '/images/destination/image-titan.webp',
         },
         description:
             'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.',
@@ -59,15 +60,11 @@ const Destination = () => {
         return dest.name === selectedDestination;
     })[0];
 
-    console.log(data);
-
-    // list all destination names
+    // list all destination names for nav bar
     const destinationName = DEST_DATA.map((dest) => dest.name.toLowerCase());
 
     const destinationClickHandler = (e) => {
-        const dest = e.target.value;
-        console.log(dest);
-        setSelectedDestination(e.target.value);
+        setSelectedDestination(e.target.innerHTML);
     };
 
     return (
@@ -75,18 +72,19 @@ const Destination = () => {
             <Head>
                 <title>Destination</title>
             </Head>
-            <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-destination-mobile sm:bg-destination-tablet lg:bg-destination-desktop'>
+            <div className='w-screen h-screen bg-center bg-cover bg-no-repeat bg-destination-mobile sm:bg-destination-tablet lg:bg-destination-desktop items-center'>
                 <Header />
 
-                <div className='flex flex-col items-center'>
-                    <p className='text-white uppercase font-barlow tracking-widest'>
+                <div className='flex flex-col items-center w-[90%] mx-auto'>
+                    <p className='text-white uppercase font-barlow tracking-widest my-6'>
                         <span className='text-[#888]'>01</span> Pick your destination
                     </p>
-                    <ul className='flex w-[60%] justify-between'>
+                    <Image src={data.images.png} width={250} height={250}></Image>
+                    <ul className='flex w-[60%] justify-between my-10'>
                         {destinationName.map((dest, idx) => {
                             return (
                                 <li
-                                    className='text-[#d0d6f9] font-barlow uppercase cursor-pointer'
+                                    className='text-[#d0d6f9] font-barlow uppercase cursor-pointer tracking-widest'
                                     key={idx}
                                     onClick={destinationClickHandler}
                                 >

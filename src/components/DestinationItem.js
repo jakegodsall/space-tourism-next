@@ -10,7 +10,7 @@ const DestinationItem = (props) => {
         <div className='flex flex-col items-center text-white'>
             <h1 className='font-bell uppercase text-6xl'>{name}</h1>
             <p className='font-barlow text-[#d0d6f9] text-center'>{description}</p>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center border-t border-[#888] w-full mt-5'>
                 <p className='font-barlow text-[#d0d6f9] uppercase tracking-widest mt-5'>
                     avg. distance
                 </p>

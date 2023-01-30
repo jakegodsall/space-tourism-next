@@ -2,8 +2,6 @@ import Image from 'next/image';
 
 import NavBar from './NavBar';
 
-import styles from './Header.module.scss';
-
 const Header = () => {
     return (
         <header className='flex justify-between items-center w-full pl-5 pt-7'>

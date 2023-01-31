@@ -52,7 +52,7 @@ const DEST_DATA = [
 ];
 
 const Destination = () => {
-    const [selectedDestination, setSelectedDestination] = useState('mars');
+    const [selectedDestination, setSelectedDestination] = useState('moon');
 
     // get the data for the destination stored in selectedDestination
     const data = DEST_DATA.filter((dest) => {

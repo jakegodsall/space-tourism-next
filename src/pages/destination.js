@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import Head from 'next/head';
-import Image from 'next/image';
 import Header from '@/components/Header';
 import DestinationItem from '@/components/DestinationItem';
 
@@ -75,11 +74,7 @@ const Destination = () => {
             <div className='w-screen h-screen bg-center bg-cover bg-no-repeat bg-destination-mobile sm:bg-destination-tablet lg:bg-destination-desktop items-center'>
                 <Header />
 
-                <div className='flex flex-col items-center w-[90%] mx-auto'>
-                    <p className='text-white uppercase font-barlow tracking-widest my-6'>
-                        <span className='text-[#888]'>01</span> Pick your destination
-                    </p>
-                    <Image src={data.images.png} width={250} height={250}></Image>
+                <DestinationItem dest={data}>
                     <ul className='flex w-[60%] justify-between my-10'>
                         {destinationName.map((dest, idx) => {
                             return (
@@ -93,8 +88,7 @@ const Destination = () => {
                             );
                         })}
                     </ul>
-                    <DestinationItem dest={data} />
-                </div>
+                </DestinationItem>
             </div>
         </>
     );

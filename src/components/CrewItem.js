@@ -15,7 +15,7 @@ const CrewItem = (props) => {
                 <span className='text-[#888]'>02</span> Meet your crew
             </p>
             <div className='grid grid-rows-2 items-center mt-5'>
-                <div className='w-full border-b-2 border-[#555]'>
+                <div className='w-full border-b-2 border-[#555] md:row-start-2'>
                     <Image
                         className='m-auto'
                         src={imageSrc}
@@ -24,7 +24,7 @@ const CrewItem = (props) => {
                         alt={name}
                     ></Image>
                 </div>
-                <div className='flex flex-col items-center'>
+                <div className='flex flex-col items-center md:row-start-1'>
                     {props.children}
                     <p className='text-[#888] font-bell uppercase text-2xl'>{role}</p>
                     <p className='text-[#fff] font-bell uppercase text-4xl'>{name}</p>

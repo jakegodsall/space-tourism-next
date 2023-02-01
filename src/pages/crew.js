@@ -54,6 +54,10 @@ const Crew = () => {
 
     const selectedData = CREW_DATA.filter((member) => member.accessKey === selectedCrewMember)[0];
 
+    const onClickHandler = (e) => {
+        setSelectedCrewMember(e.target.value);
+    };
+
     return (
         <>
             <Head>
@@ -61,7 +65,38 @@ const Crew = () => {
             </Head>
             <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-crew-mobile sm:bg-crew-tablet lg:bg-crew-desktop'>
                 <Header />
-                <CrewItem data={selectedData}></CrewItem>
+                <CrewItem data={selectedData}>
+                    <div className='flex w-[100px] justify-between'>
+                        <input
+                            type='radio'
+                            name='crewMember'
+                            value='dh'
+                            onClick={onClickHandler}
+                            className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
+                        />
+                        <input
+                            type='radio'
+                            name='crewMember'
+                            value='ms'
+                            onClick={onClickHandler}
+                            className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
+                        />
+                        <input
+                            type='radio'
+                            name='crewMember'
+                            value='vg'
+                            onClick={onClickHandler}
+                            className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
+                        />
+                        <input
+                            type='radio'
+                            name='crewMember'
+                            value='aa'
+                            onClick={onClickHandler}
+                            className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
+                        />
+                    </div>
+                </CrewItem>
             </div>
         </>
     );

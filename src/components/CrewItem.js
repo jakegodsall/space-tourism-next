@@ -28,9 +28,9 @@ const CrewItem = (props) => {
             <p className='text-white text-xl uppercase font-barlow tracking-[4px] my-6 md:text-2xl md:self-start md:mb-8 duration-1000'>
                 <span className='text-[#888]'>02</span> Meet your crew
             </p>
-            <div className='grid grid-rows-[320px, auto] items-center mt-5'>
-                <div className='w-full border-b-2 border-[#555] md:row-start-2 relative'>
-                    <Image className='m-auto' src={imageSrc} alt={name}></Image>
+            <div className='grid grid-rows-2 items-center mt-5'>
+                <div className='h-[320px] border-b-2 border-[#555] md:row-start-2 relative'>
+                    <Image src={imageSrc} alt={name} className='m-auto object-contain' fill></Image>
                 </div>
                 <div className='h-full w-[60%] mx-auto flex flex-col items-center md:row-start-1 md:justify-between md:relative'>
                     <div className='md:invisible'>{props.children}</div>

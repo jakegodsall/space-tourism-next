@@ -73,6 +73,7 @@ const Crew = () => {
                             value='dh'
                             onClick={onClickHandler}
                             className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
+                            checked={selectedCrewMember === 'dh'}
                         />
                         <input
                             type='radio'
@@ -80,6 +81,7 @@ const Crew = () => {
                             value='ms'
                             onClick={onClickHandler}
                             className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
+                            checked={selectedCrewMember === 'ms'}
                         />
                         <input
                             type='radio'
@@ -87,6 +89,7 @@ const Crew = () => {
                             value='vg'
                             onClick={onClickHandler}
                             className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
+                            checked={selectedCrewMember === 'vg'}
                         />
                         <input
                             type='radio'
@@ -94,6 +97,7 @@ const Crew = () => {
                             value='aa'
                             onClick={onClickHandler}
                             className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
+                            checked={selectedCrewMember === 'aa'}
                         />
                     </div>
                 </CrewItem>

@@ -21,15 +21,13 @@ const CrewItem = (props) => {
     const imageSrc = imageMap[props.data.accessKey];
     const bio = props.data.bio;
 
-    console.log(imageSrc);
-
     return (
         <div className='flex flex-col items-center m-8 duration-1000'>
             <p className='text-white text-xl uppercase font-barlow tracking-[4px] my-6 md:text-2xl md:self-start md:mb-8 duration-1000'>
                 <span className='text-[#888]'>02</span> Meet your crew
             </p>
             <div className='grid grid-rows-[320px, auto] items-center mt-5 lg:grid-rows-1 lg:grid-cols-2'>
-                <div className='h-[320px] border-b-2 border-[#555] md:row-start-2 relative md:h-[400px] md:border-b-0 lg:row-start-1 lg:col-start-2 lg:h-[800px]'>
+                <div className='h-[320px] border-b-2 border-[#555] md:row-start-2 relative md:h-[400px] md:border-b-0 lg:row-start-1 lg:col-start-2 lg:h-[60vh]'>
                     <Image src={imageSrc} alt={name} className='m-auto object-contain' fill></Image>
                 </div>
                 <div className='h-full w-full px-5 mx-auto flex flex-col items-center text-center md:row-start-1 md:relative md:h-[300px] md:w-[75%] lg:h-full lg:justify-center'>

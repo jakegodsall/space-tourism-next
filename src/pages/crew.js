@@ -54,8 +54,9 @@ const Crew = () => {
 
     const selectedData = CREW_DATA.filter((member) => member.accessKey === selectedCrewMember)[0];
 
-    const onClickHandler = (e) => {
+    const onChangeHandler = (e) => {
         setSelectedCrewMember(e.target.value);
+        e.target.checked = true;
     };
 
     return (
@@ -71,33 +72,30 @@ const Crew = () => {
                             type='radio'
                             name='crewMember'
                             value='dh'
-                            onClick={onClickHandler}
+                            onChange={onChangeHandler}
                             className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
-                            checked={selectedCrewMember === 'dh'}
+                            defaultChecked={true}
                         />
                         <input
                             type='radio'
                             name='crewMember'
                             value='ms'
-                            onClick={onClickHandler}
+                            onChange={onChangeHandler}
                             className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
-                            checked={selectedCrewMember === 'ms'}
                         />
                         <input
                             type='radio'
                             name='crewMember'
                             value='vg'
-                            onClick={onClickHandler}
+                            onChange={onChangeHandler}
                             className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
-                            checked={selectedCrewMember === 'vg'}
                         />
                         <input
                             type='radio'
                             name='crewMember'
                             value='aa'
-                            onClick={onClickHandler}
+                            onChange={onChangeHandler}
                             className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
-                            checked={selectedCrewMember === 'aa'}
                         />
                     </div>
                 </CrewItem>

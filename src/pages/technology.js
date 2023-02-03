@@ -52,7 +52,10 @@ const Technology = () => {
 
     const data = TECH_DATA.filter((dataItem) => dataItem.accessKey === selectedTechnology)[0];
 
-    console.log(data);
+    const onChangeHandler = (e) => {
+        setSelectedTechnology(e.target.value);
+        e.target.checked = true;
+    };
 
     return (
         <>
@@ -61,13 +64,92 @@ const Technology = () => {
             </Head>
             <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-technology-mobile sm:bg-technology-tablet lg:bg-technology-desktop'>
                 <Header />
+                <p className='text-white text-xl tracking-widest uppercase text-center font-barlow font-light my-6 md:text-2xl md:self-start md:mb-8'>
+                    <span className='text-[#888]'>03</span> Space Launch 101
+                </p>
                 <div>
                     <TechnologyItem
                         name={data.name}
                         description={data.description}
                         portrait={data.images.portrait}
                         landscape={data.images.landscape}
-                    />
+                    >
+                        <ul className='flex justify-center'>
+                            <li>
+                                <label
+                                    htmlFor='lv'
+                                    className='flex justify-center items-center
+                                rounded-full text-2xl font-bell uppercase
+                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2'
+                                >
+                                    1
+                                </label>
+                                <input
+                                    type='radio'
+                                    name='technology'
+                                    value='lv'
+                                    id='lv'
+                                    class='appearance-none'
+                                    onChange={onChangeHandler}
+                                    defaultChecked={true}
+                                />
+                            </li>
+                            <li>
+                                <label
+                                    htmlFor='sp'
+                                    className='flex justify-center items-center
+                                rounded-full text-2xl font-bell uppercase
+                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2'
+                                >
+                                    2
+                                </label>
+                                <input
+                                    type='radio'
+                                    name='technology'
+                                    value='sp'
+                                    id='sp'
+                                    class='appearance-none'
+                                    onChange={onChangeHandler}
+                                    defaultChecked={true}
+                                />
+                            </li>
+                            <li>
+                                <label
+                                    htmlFor='sc'
+                                    className='flex justify-center items-center
+                                rounded-full text-2xl font-bell uppercase
+                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2'
+                                >
+                                    3
+                                </label>
+                                <input
+                                    type='radio'
+                                    name='technology'
+                                    value='sc'
+                                    id='sc'
+                                    class='appearance-none'
+                                    onChange={onChangeHandler}
+                                    defaultChecked={true}
+                                />
+                            </li>
+                            {/* <li
+                                className='relative z-10 flex justify-center items-center
+                                rounded-full text-2xl font-bell uppercase text-[rgba(0, 0, 0, 0)]
+                                w-[3rem] h-[3rem] bg-white cursor-pointer mx-2'
+                                href='/destination'
+                            >
+                                2
+                            </li>
+                            <li
+                                className='relative z-10 flex justify-center items-center
+                                rounded-full text-2xl font-bell uppercase text-[rgba(0, 0, 0, 0)]
+                                w-[3rem] h-[3rem] bg-white cursor-pointer mx-2'
+                                href='/destination'
+                            >
+                                3
+                            </li> */}
+                        </ul>
+                    </TechnologyItem>
                 </div>
             </div>
         </>

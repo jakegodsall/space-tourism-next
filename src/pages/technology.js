@@ -65,10 +65,10 @@ const Technology = () => {
             </Head>
             <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-technology-mobile sm:bg-technology-tablet lg:bg-technology-desktop'>
                 <Header />
-                <p className='text-white text-xl tracking-widest uppercase text-center font-barlow font-light my-6 md:text-2xl md:self-start md:mb-8'>
+                <p className='text-white text-xl tracking-widest uppercase text-center font-barlow font-light my-6 md:text-2xl md:self-start md:mb-8 lg:text-start lg:ml-[5rem] lg:text-3xl'>
                     <span className='text-[#888]'>03</span> Space Launch 101
                 </p>
-                <div>
+                <div className='flex justify-center'>
                     <TechnologyItem
                         name={data.name}
                         description={data.description}
@@ -81,7 +81,7 @@ const Technology = () => {
                                     htmlFor='lv'
                                     className='flex justify-center items-center
                                 rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2'
+                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
                                 >
                                     1
                                 </label>
@@ -100,7 +100,7 @@ const Technology = () => {
                                     htmlFor='sp'
                                     className='flex justify-center items-center
                                 rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2'
+                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
                                 >
                                     2
                                 </label>
@@ -119,7 +119,7 @@ const Technology = () => {
                                     htmlFor='sc'
                                     className='flex justify-center items-center
                                 rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2'
+                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
                                 >
                                     3
                                 </label>

@@ -55,6 +55,7 @@ const Technology = () => {
     const onChangeHandler = (e) => {
         setSelectedTechnology(e.target.value);
         e.target.checked = true;
+        console.log(e.target.value + ' clicked');
     };
 
     return (
@@ -89,7 +90,7 @@ const Technology = () => {
                                     name='technology'
                                     value='lv'
                                     id='lv'
-                                    class='appearance-none'
+                                    className='appearance-none'
                                     onChange={onChangeHandler}
                                     defaultChecked={true}
                                 />
@@ -108,7 +109,7 @@ const Technology = () => {
                                     name='technology'
                                     value='sp'
                                     id='sp'
-                                    class='appearance-none'
+                                    className='appearance-none'
                                     onChange={onChangeHandler}
                                     defaultChecked={true}
                                 />
@@ -127,27 +128,11 @@ const Technology = () => {
                                     name='technology'
                                     value='sc'
                                     id='sc'
-                                    class='appearance-none'
+                                    className='appearance-none'
                                     onChange={onChangeHandler}
                                     defaultChecked={true}
                                 />
                             </li>
-                            {/* <li
-                                className='relative z-10 flex justify-center items-center
-                                rounded-full text-2xl font-bell uppercase text-[rgba(0, 0, 0, 0)]
-                                w-[3rem] h-[3rem] bg-white cursor-pointer mx-2'
-                                href='/destination'
-                            >
-                                2
-                            </li>
-                            <li
-                                className='relative z-10 flex justify-center items-center
-                                rounded-full text-2xl font-bell uppercase text-[rgba(0, 0, 0, 0)]
-                                w-[3rem] h-[3rem] bg-white cursor-pointer mx-2'
-                                href='/destination'
-                            >
-                                3
-                            </li> */}
                         </ul>
                     </TechnologyItem>
                 </div>

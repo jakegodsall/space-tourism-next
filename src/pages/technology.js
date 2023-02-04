@@ -39,7 +39,7 @@ const TECH_DATA = [
         accessKey: 'sc',
         name: 'Space capsule',
         images: {
-            portrait: SpaceCapsuleLandscape,
+            portrait: SpaceCapsulePortrait,
             landscape: SpaceCapsuleLandscape,
         },
         description:
@@ -75,7 +75,7 @@ const Technology = () => {
                         portrait={data.images.portrait}
                         landscape={data.images.landscape}
                     >
-                        <ul className='flex justify-center'>
+                        <ul className='flex justify-center lg:flex-col'>
                             <li>
                                 <label
                                     htmlFor='lv'

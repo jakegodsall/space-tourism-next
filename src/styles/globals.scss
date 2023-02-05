@@ -12,3 +12,13 @@
         @apply bg-gray-900;
     }
 }
+
+@layer components {
+    .techButton {
+        @apply flex justify-center items-center rounded-full text-2xl font-bell uppercase w-[3rem] h-[3rem] border-[1px] text-white cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] lg:my-3';
+    }
+
+    .techButtonActive {
+        @apply flex justify-center items-center rounded-full text-2xl font-bell uppercase w-[3rem] h-[3rem] border-[1px] text-white cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] lg:my-3';
+    }
+}

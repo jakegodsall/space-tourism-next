@@ -52,10 +52,12 @@ const Technology = () => {
 
     const data = TECH_DATA.filter((dataItem) => dataItem.accessKey === selectedTechnology)[0];
 
-    const onChangeHandler = (e) => {
+    const onClickHandler = (e) => {
+        console.log(e.target.value);
         setSelectedTechnology(e.target.value);
-        e.target.checked = true;
         console.log(e.target.value + ' clicked');
+
+        e.target.classList.add('activeBtn');
     };
 
     return (
@@ -75,13 +77,13 @@ const Technology = () => {
                         portrait={data.images.portrait}
                         landscape={data.images.landscape}
                     >
-                        <ul className='flex justify-center lg:flex-col'>
+                        {/* <ul className='flex justify-center lg:flex-col peer'>
                             <li>
                                 <label
                                     htmlFor='lv'
                                     className='flex justify-center items-center
                                 rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
+                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-red cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
                                 >
                                     1
                                 </label>
@@ -90,9 +92,8 @@ const Technology = () => {
                                     name='technology'
                                     value='lv'
                                     id='lv'
-                                    className='appearance-none'
+                                    className='opacity-0 peer'
                                     onChange={onChangeHandler}
-                                    defaultChecked={true}
                                 />
                             </li>
                             <li>
@@ -100,7 +101,7 @@ const Technology = () => {
                                     htmlFor='sp'
                                     className='flex justify-center items-center
                                 rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
+                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
                                 >
                                     2
                                 </label>
@@ -109,9 +110,8 @@ const Technology = () => {
                                     name='technology'
                                     value='sp'
                                     id='sp'
-                                    className='appearance-none'
+                                    className='opacity-0 peer'
                                     onChange={onChangeHandler}
-                                    defaultChecked={true}
                                 />
                             </li>
                             <li>
@@ -119,7 +119,7 @@ const Technology = () => {
                                     htmlFor='sc'
                                     className='flex justify-center items-center
                                 rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white checked:bg-white checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
+                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
                                 >
                                     3
                                 </label>
@@ -128,12 +128,40 @@ const Technology = () => {
                                     name='technology'
                                     value='sc'
                                     id='sc'
-                                    className='appearance-none'
+                                    className='opacity-0 peer'
                                     onChange={onChangeHandler}
-                                    defaultChecked={true}
                                 />
                             </li>
-                        </ul>
+                        </ul> */}
+                        <nav className='flex justify-center lg:flex-col'>
+                            <button
+                                className='flex justify-center items-center
+                                rounded-full text-2xl font-bell uppercase
+                                w-[3rem] h-[3rem] border-[1px] text-white cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] lg:my-3'
+                                onClick={onClickHandler}
+                                value='lv'
+                            >
+                                1
+                            </button>
+                            <button
+                                className='flex justify-center items-center
+                                rounded-full text-2xl font-bell uppercase
+                                w-[3rem] h-[3rem] border-[1px] text-white cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] lg:my-3'
+                                onClick={onClickHandler}
+                                value='sp'
+                            >
+                                2
+                            </button>
+                            <button
+                                className='flex justify-center items-center
+                                rounded-full text-2xl font-bell uppercase
+                                w-[3rem] h-[3rem] border-[1px] text-white cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] lg:my-3'
+                                onClick={onClickHandler}
+                                value='sc'
+                            >
+                                3
+                            </button>
+                        </nav>
                     </TechnologyItem>
                 </div>
             </div>

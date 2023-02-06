@@ -7,9 +7,4 @@
   body {
     @apply bg-gray-900;
   }
-}
-@layer components {
-  .activeBtn {
-    @apply bg-white text-green-700;
-  }
 }/*# sourceMappingURL=globals.css.map */

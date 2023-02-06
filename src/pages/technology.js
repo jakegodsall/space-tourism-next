@@ -52,12 +52,8 @@ const Technology = () => {
 
     const data = TECH_DATA.filter((dataItem) => dataItem.accessKey === selectedTechnology)[0];
 
-    const onClickHandler = (e) => {
-        console.log(e.target.value);
+    const onChangeHandler = (e) => {
         setSelectedTechnology(e.target.value);
-        console.log(e.target.value + ' clicked');
-
-        e.target.classList.add('activeBtn');
     };
 
     return (
@@ -88,6 +84,7 @@ const Technology = () => {
                                             id={data.accessKey}
                                             className='invisible peer'
                                             onChange={onChangeHandler}
+                                            defaultChecked={TECH_DATA.indexOf(data) === 0}
                                         ></input>
                                         <label
                                             htmlFor={data.accessKey}
@@ -95,7 +92,9 @@ const Technology = () => {
                                 rounded-full text-2xl font-bell uppercase
                                 w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-black cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] transition-all duration-400'
                                         >
-              
+                                            {TECH_DATA.indexOf(data) + 1}
+                                        </label>
+                                    </div>
                                 );
                             })}
                         </nav>

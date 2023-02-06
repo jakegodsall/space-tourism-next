@@ -75,7 +75,7 @@ const Technology = () => {
                         portrait={data.images.portrait}
                         landscape={data.images.landscape}
                     >
-                        <nav>
+                        <nav className='flex justify-center lg:flex-col'>
                             {TECH_DATA.map((data) => {
                                 return (
                                     <div>

@@ -67,37 +67,20 @@ const Crew = () => {
             <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-crew-mobile sm:bg-crew-tablet lg:bg-crew-desktop'>
                 <Header />
                 <CrewItem data={selectedData}>
-                    <div className='flex w-[100px] justify-between'>
-                        <input
-                            type='radio'
-                            name='crewMember'
-                            value='dh'
-                            onChange={onChangeHandler}
-                            className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
-                            defaultChecked={true}
-                        />
-                        <input
-                            type='radio'
-                            name='crewMember'
-                            value='ms'
-                            onChange={onChangeHandler}
-                            className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
-                        />
-                        <input
-                            type='radio'
-                            name='crewMember'
-                            value='vg'
-                            onChange={onChangeHandler}
-                            className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
-                        />
-                        <input
-                            type='radio'
-                            name='crewMember'
-                            value='aa'
-                            onChange={onChangeHandler}
-                            className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff]'
-                        />
-                    </div>
+                    <nav className='flex w-[100px] justify-between'>
+                        {CREW_DATA.map((data) => {
+                            return (
+                                <input
+                                    type='radio'
+                                    name='crewMember'
+                                    value={data.accessKey}
+                                    onChange={onChangeHandler}
+                                    className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff] transition-all duration-500'
+                                    defaultChecked={CREW_DATA.indexOf(data) === 0}
+                                />
+                            );
+                        })}
+                    </nav>
                 </CrewItem>
             </div>
         </>

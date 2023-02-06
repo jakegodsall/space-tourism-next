@@ -90,7 +90,7 @@ const Technology = () => {
                                             htmlFor={data.accessKey}
                                             className='flex justify-center items-center
                                 rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-black cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] transition-all duration-400'
+                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-black cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] transition-all duration-500'
                                         >
                                             {TECH_DATA.indexOf(data) + 1}
                                         </label>

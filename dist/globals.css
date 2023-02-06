@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Bellefair&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {}
+  body {
+    @apply bg-gray-900;
+  }
+}
+@layer components {
+  .activeBtn {
+    @apply bg-white text-green-700;
+  }
+}/*# sourceMappingURL=globals.css.map */

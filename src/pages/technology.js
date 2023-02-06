@@ -77,90 +77,27 @@ const Technology = () => {
                         portrait={data.images.portrait}
                         landscape={data.images.landscape}
                     >
-                        {/* <ul className='flex justify-center lg:flex-col peer'>
-                            <li>
-                                <label
-                                    htmlFor='lv'
-                                    className='flex justify-center items-center
-                                rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-red cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
-                                >
-                                    1
-                                </label>
-                                <input
-                                    type='radio'
-                                    name='technology'
-                                    value='lv'
-                                    id='lv'
-                                    className='opacity-0 peer'
-                                    onChange={onChangeHandler}
-                                />
-                            </li>
-                            <li>
-                                <label
-                                    htmlFor='sp'
-                                    className='flex justify-center items-center
-                                rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
-                                >
-                                    2
-                                </label>
-                                <input
-                                    type='radio'
-                                    name='technology'
-                                    value='sp'
-                                    id='sp'
-                                    className='opacity-0 peer'
-                                    onChange={onChangeHandler}
-                                />
-                            </li>
-                            <li>
-                                <label
-                                    htmlFor='sc'
-                                    className='flex justify-center items-center
-                                rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-[rgba(0, 0, 0, 0)] cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem]'
-                                >
-                                    3
-                                </label>
-                                <input
-                                    type='radio'
-                                    name='technology'
-                                    value='sc'
-                                    id='sc'
-                                    className='opacity-0 peer'
-                                    onChange={onChangeHandler}
-                                />
-                            </li>
-                        </ul> */}
                         <nav className='flex justify-center lg:flex-col'>
-                            <button
-                                className='flex justify-center items-center
+                            {TECH_DATA.map((data) => {
+                                return (
+                                    <div>
+                                        <input
+                                            type='radio'
+                                            name='technology'
+                                            value={data.accessKey}
+                                            id={data.accessKey}
+                                            className='invisible peer'
+                                            onChange={onChangeHandler}
+                                        ></input>
+                                        <label
+                                            htmlFor={data.accessKey}
+                                            className='flex justify-center items-center
                                 rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] lg:my-3'
-                                onClick={onClickHandler}
-                                value='lv'
-                            >
-                                1
-                            </button>
-                            <button
-                                className='flex justify-center items-center
-                                rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] lg:my-3'
-                                onClick={onClickHandler}
-                                value='sp'
-                            >
-                                2
-                            </button>
-                            <button
-                                className='flex justify-center items-center
-                                rounded-full text-2xl font-bell uppercase
-                                w-[3rem] h-[3rem] border-[1px] text-white cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] lg:my-3'
-                                onClick={onClickHandler}
-                                value='sc'
-                            >
-                                3
-                            </button>
+                                w-[3rem] h-[3rem] border-[1px] text-white peer-checked:bg-white peer-checked:text-black cursor-pointer mx-2 lg:w-[4rem] lg:h-[4rem] transition-all duration-400'
+                                        >
+              
+                                );
+                            })}
                         </nav>
                     </TechnologyItem>
                 </div>

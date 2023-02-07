@@ -42,7 +42,7 @@ const NavBar = () => {
             <div
                 className={
                     nav
-                        ? 'fixed w-[65%] h-screen right-0 top-0  backdrop-blur-2xl ease-in duration-500'
+                        ? 'fixed w-[65%] h-screen right-0 top-0  backdrop-blur-2xl ease-in duration-500 z-20'
                         : 'fixed w-[65%] h-screen right-[-100%] top-0  backdrop-blur-2xl ease-in duration-500'
                 }
             >

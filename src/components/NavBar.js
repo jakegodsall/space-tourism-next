@@ -19,22 +19,38 @@ const NavBar = () => {
             >
                 <ul className='flex w-full h-full justify-between mr-20 font-barlow uppercase text-white px-4'>
                     <li className='flex justify-center'>
-                        <ActiveLink href='/'>
+                        <ActiveLink
+                            href='/'
+                            activeStyles={`flex justify-center w-[90%] py-8 border-b-4 border-white`}
+                            styles={`flex justify-center py-8`}
+                        >
                             <span className='font-bold mr-3'>00</span> Home
                         </ActiveLink>
                     </li>
                     <li className='flex justify-center'>
-                        <ActiveLink href='/destination'>
+                        <ActiveLink
+                            href='/destination'
+                            activeStyles={`flex justify-center w-[90%] py-8 border-b-4 border-white`}
+                            styles={`flex justify-center py-8`}
+                        >
                             <span className='font-bold mr-3'>01</span> Destination
                         </ActiveLink>
                     </li>
                     <li className='flex justify-center'>
-                        <ActiveLink href='/crew'>
+                        <ActiveLink
+                            href='/crew'
+                            activeStyles={`flex justify-center w-[90%] py-8 border-b-4 border-white`}
+                            styles={`flex justify-center py-8`}
+                        >
                             <span className='font-bold mr-3'>02</span> Crew
                         </ActiveLink>
                     </li>
                     <li className='flex justify-center'>
-                        <ActiveLink href='/technology'>
+                        <ActiveLink
+                            href='/technology'
+                            activeStyles={`flex justify-center w-[90%] py-8 border-b-4 border-white`}
+                            styles={`flex justify-center py-8`}
+                        >
                             <span className='font-bold mr-3'>03</span> Technology
                         </ActiveLink>
                     </li>

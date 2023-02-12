@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Link from 'next/link';
+import ActiveLink from './ActiveLink';
 import Image from 'next/image';
 
 const NavBar = () => {
@@ -14,20 +15,28 @@ const NavBar = () => {
         <>
             <nav
                 className='hidden md:flex w-[60%]
-     items-center justify-between p-4 py-8 backdrop-blur-2xl'
+     items-center justify-between  backdrop-blur-2xl'
             >
-                <ul className='flex w-full justify-between mr-20 font-barlow uppercase text-white'>
-                    <li>
-                        <Link href='/'>Home</Link>
+                <ul className='flex w-full h-full justify-between mr-20 font-barlow uppercase text-white px-4'>
+                    <li className='flex justify-center'>
+                        <ActiveLink href='/'>
+                            <span className='font-bold mr-3'>00</span> Home
+                        </ActiveLink>
                     </li>
-                    <li>
-                        <Link href='/destination'>Destination</Link>
+                    <li className='flex justify-center'>
+                        <ActiveLink href='/destination'>
+                            <span className='font-bold mr-3'>01</span> Destination
+                        </ActiveLink>
                     </li>
-                    <li>
-                        <Link href='/crew'>Crew</Link>
+                    <li className='flex justify-center'>
+                        <ActiveLink href='/crew'>
+                            <span className='font-bold mr-3'>02</span> Crew
+                        </ActiveLink>
                     </li>
-                    <li>
-                        <Link href='/technology'>Technology</Link>
+                    <li className='flex justify-center'>
+                        <ActiveLink href='/technology'>
+                            <span className='font-bold mr-3'>03</span> Technology
+                        </ActiveLink>
                     </li>
                 </ul>
             </nav>

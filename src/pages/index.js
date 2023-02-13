@@ -32,12 +32,14 @@ export default function Home() {
                             </p>
                         </div>
                         <div className='flex justify-center items-center'>
-                            <Link
-                                className='relative z-10 flex justify-center items-center rounded-full text-4xl font-bell uppercase text-[rgba(0, 0, 0, 0)] w-[220px] h-[220px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px] bg-white before:absolute before:w-0 before:h-0 before:backdrop-blur-md before:rounded-full hover:before:w-[300px] hover:before:h-[300px] transition-all duration-1000'
-                                href='/destination'
-                            >
-                                Explore
-                            </Link>
+                            <div className='flex flex-col justify-center items-center rounded-full w-[220px] h-[220px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px]  hover:w-[270px] hover:h-[270px]  hover:backdrop-blur-lg hover:md:w-[310px] hover:md:h-[310px] hover:lg:w-[350px] hover:lg:h-[350px] transition-all duration-1000'>
+                                <Link
+                                    className='relative z-10 flex justify-center items-center rounded-full text-4xl font-bell uppercase text-[rgba(0, 0, 0, 0)] w-[220px] h-[220px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px] bg-white transition-all duration-1000'
+                                    href='/destination'
+                                >
+                                    Explore
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

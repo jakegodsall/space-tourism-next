@@ -15,7 +15,6 @@ const imageMap = {
 };
 
 const CrewItem = (props) => {
-    console.log(props.data);
     const role = props.data.role;
     const name = props.data.name;
     const imageSrc = imageMap[props.data.accessKey];

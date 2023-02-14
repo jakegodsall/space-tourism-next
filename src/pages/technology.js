@@ -74,9 +74,9 @@ const Technology = () => {
                         landscape={data.images.landscape}
                     >
                         <nav className='flex justify-center lg:flex-col'>
-                            {TECH_DATA.map((data) => {
+                            {TECH_DATA.map((data, key) => {
                                 return (
-                                    <div>
+                                    <div key={key}>
                                         <input
                                             type='radio'
                                             name='technology'

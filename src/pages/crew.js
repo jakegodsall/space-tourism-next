@@ -68,11 +68,12 @@ const Crew = () => {
                 <Header />
                 <CrewItem data={selectedData}>
                     <nav className='flex w-[100px] justify-between'>
-                        {CREW_DATA.map((data) => {
+                        {CREW_DATA.map((data, key) => {
                             return (
                                 <input
                                     type='radio'
                                     name='crewMember'
+                                    key={key}
                                     value={data.accessKey}
                                     onChange={onChangeHandler}
                                     className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff] transition-all duration-500'

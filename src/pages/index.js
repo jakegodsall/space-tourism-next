@@ -10,6 +10,7 @@ export default function Home() {
         <>
             <Head>
                 <title>Space Tourism</title>
+                <link rel='icon' href='/favicon.svg' />
             </Head>
 
             <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-home-mobile sm:bg-home-tablet lg:bg-home-desktop'>

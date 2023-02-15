@@ -77,19 +77,21 @@ const Destination = () => {
 
                 <SectionTransition keyValue={data.name}>
                     <DestinationItem dest={data} keyValue={data.name}>
-                        <ul className='flex w-[60%] justify-between my-10'>
-                            {destinationName.map((dest, idx) => {
-                                return (
-                                    <li
-                                        className='text-[#d0d6f9] font-barlow uppercase cursor-pointer tracking-widest'
-                                        key={idx}
-                                        onClick={destinationClickHandler}
-                                    >
-                                        {dest}
-                                    </li>
-                                );
-                            })}
-                        </ul>
+                        <nav className='w-full'>
+                            <ul className='flex w-[60%] justify-between my-10'>
+                                {destinationName.map((dest, idx) => {
+                                    return (
+                                        <li
+                                            className='text-[#d0d6f9] font-barlow uppercase cursor-pointer tracking-widest'
+                                            key={idx}
+                                            onClick={destinationClickHandler}
+                                        >
+                                            {dest}
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </nav>
                     </DestinationItem>
                 </SectionTransition>
             </div>

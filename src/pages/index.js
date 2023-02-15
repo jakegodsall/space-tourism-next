@@ -13,7 +13,7 @@ export default function Home() {
                 <link rel='icon' href='/favicon.svg' />
             </Head>
 
-            <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-home-mobile sm:bg-home-tablet lg:bg-home-desktop'>
+            <div className='w-full h-full bg-center bg-cover bg-no-repeat bg-home-mobile sm:bg-home-tablet lg:bg-home-desktop'>
                 <Header />
                 <div className='h-[90vh] flex flex-col justify-center'>
                     <div className='mt-20 grid grid-rows-[40vh_45vh] md:grid-rows-[40vh_40vh] lg:grid-rows-1 grid-cols-auto lg:grid-cols-2 gap-10 items-center text-center lg:w-[80vw] lg:mx-auto'>

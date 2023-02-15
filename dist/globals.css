@@ -4,7 +4,13 @@
 @tailwind utilities;
 @layer base {
   @font-face {}
+  html {
+    @apply w-full h-full;
+  }
   body {
-    @apply bg-gray-900;
+    @apply bg-gray-900 w-full h-full;
+  }
+  #__next {
+    @apply w-full h-full;
   }
 }/*# sourceMappingURL=globals.css.map */

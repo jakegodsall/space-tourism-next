@@ -63,7 +63,7 @@ const Crew = () => {
             <Head>
                 <title>Crew</title>
             </Head>
-            <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-crew-mobile sm:bg-crew-tablet lg:bg-crew-desktop'>
+            <div className='w-full h-full bg-center bg-cover bg-no-repeat bg-crew-mobile sm:bg-crew-tablet lg:bg-crew-desktop'>
                 <Header />
                 <SectionTransition keyValue={selectedData.name}>
                     <CrewItem data={selectedData} keyValue={selectedData.name}>

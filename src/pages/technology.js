@@ -60,7 +60,7 @@ const Technology = () => {
             <Head>
                 <title>Technology</title>
             </Head>
-            <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-technology-mobile sm:bg-technology-tablet lg:bg-technology-desktop'>
+            <div className='w-full h-full bg-center bg-cover bg-no-repeat bg-technology-mobile sm:bg-technology-tablet lg:bg-technology-desktop'>
                 <Header />
                 <p className='text-white text-xl tracking-widest uppercase text-center font-barlow font-light my-6 md:text-2xl md:self-start md:mb-8 lg:text-start lg:ml-[5rem] lg:text-3xl'>
                     <span className='text-[#888]'>03</span> Space Launch 101

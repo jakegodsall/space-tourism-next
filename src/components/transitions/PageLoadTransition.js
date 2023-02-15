@@ -23,9 +23,16 @@ const PageLoadTransition = ({ children }) => {
     const { asPath } = useRouter();
 
     return (
-        <div className='pageLoad'>
-            <AnimatePresence initial={false} mode='wait'>
-                <motion.div key={asPath} variants={variants} animate='in' initial='out' exit='out'>
+        <div className='w-full h-full'>
+            <AnimatePresence initial={false} mode='wait' className='w-full h-full'>
+                <motion.div
+                    key={asPath}
+                    variants={variants}
+                    animate='in'
+                    initial='out'
+                    exit='out'
+                    className='w-full h-full'
+                >
                     {children}
                 </motion.div>
             </AnimatePresence>

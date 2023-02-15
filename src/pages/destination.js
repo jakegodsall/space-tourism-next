@@ -72,7 +72,7 @@ const Destination = () => {
             <Head>
                 <title>Destination</title>
             </Head>
-            <div className='w-screen h-screen bg-center bg-cover bg-no-repeat bg-destination-mobile sm:bg-destination-tablet lg:bg-destination-desktop items-center'>
+            <div className='w-full h-full bg-center bg-cover bg-no-repeat bg-destination-mobile sm:bg-destination-tablet lg:bg-destination-desktop items-center overflow-auto'>
                 <Header />
 
                 <SectionTransition keyValue={data.name}>

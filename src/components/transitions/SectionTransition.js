@@ -10,7 +10,8 @@ const variants = {
     in: {
         opacity: 1,
         transition: {
-            duration: 0.4,
+            duration: 0.8,
+            delay: 0.5,
         },
     },
 };

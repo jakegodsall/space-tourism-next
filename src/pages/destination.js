@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Header from '@/components/Header';
 import DestinationItem from '@/components/DestinationItem';
 
+import SectionTransition from '@/components/transitions/SectionTransition';
+
 const DEST_DATA = [
     {
         name: 'moon',
@@ -74,21 +76,23 @@ const Destination = () => {
             <div className='w-screen h-screen bg-center bg-cover bg-no-repeat bg-destination-mobile sm:bg-destination-tablet lg:bg-destination-desktop items-center'>
                 <Header />
 
-                <DestinationItem dest={data}>
-                    <ul className='flex w-[60%] justify-between my-10'>
-                        {destinationName.map((dest, idx) => {
-                            return (
-                                <li
-                                    className='text-[#d0d6f9] font-barlow uppercase cursor-pointer tracking-widest'
-                                    key={idx}
-                                    onClick={destinationClickHandler}
-                                >
-                                    {dest}
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </DestinationItem>
+                <SectionTransition keyValue={data.name}>
+                    <DestinationItem dest={data} keyValue={data.name}>
+                        <ul className='flex w-[60%] justify-between my-10'>
+                            {destinationName.map((dest, idx) => {
+                                return (
+                                    <li
+                                        className='text-[#d0d6f9] font-barlow uppercase cursor-pointer tracking-widest'
+                                        key={idx}
+                                        onClick={destinationClickHandler}
+                                    >
+                                        {dest}
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </DestinationItem>
+                </SectionTransition>
             </div>
         </>
     );

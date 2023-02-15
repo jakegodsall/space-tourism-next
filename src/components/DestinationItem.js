@@ -9,7 +9,10 @@ const DestinationItem = (props) => {
     const travel = props.dest.travel;
 
     return (
-        <div className='flex flex-col items-center w-[90%] max-w-[500px] mx-auto md:w-[70%] md:max-w-[700px] md:mt-10 lg:max-w-[1400px] duration-1000'>
+        <div
+            className='flex flex-col items-center w-[90%] max-w-[500px] mx-auto md:w-[70%] md:max-w-[700px] md:mt-10 lg:max-w-[1400px] duration-1000'
+            key={props.keyValue}
+        >
             <p className='text-white uppercase font-barlow tracking-widest my-6 md:text-2xl md:self-start md:mb-8'>
                 <span className='text-[#888]'>01</span> Pick your destination
             </p>

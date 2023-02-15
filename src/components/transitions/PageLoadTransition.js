@@ -19,7 +19,7 @@ const variants = {
     },
 };
 
-const Transition = ({ children }) => {
+const PageLoadTransition = ({ children }) => {
     const { asPath } = useRouter();
 
     return (
@@ -33,4 +33,4 @@ const Transition = ({ children }) => {
     );
 };
 
-export default Transition;
+export default PageLoadTransition;

@@ -21,7 +21,7 @@ const CrewItem = (props) => {
     const bio = props.data.bio;
 
     return (
-        <div className='flex flex-col items-center m-8 duration-1000'>
+        <div className='flex flex-col items-center m-8 duration-1000' key={props.keyValue}>
             <p className='text-white text-xl uppercase font-barlow tracking-[4px] my-6 md:text-2xl md:self-start md:mb-8 lg:hidden duration-1000'>
                 <span className='text-[#888]'>02</span> Meet your crew
             </p>

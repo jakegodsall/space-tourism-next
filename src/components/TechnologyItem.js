@@ -4,7 +4,10 @@ import Image from 'next/image';
 
 const TechnologyItem = (props) => {
     return (
-        <div className='flex flex-col items-center lg:grid lg:grid-cols-[1fr,auto,500px] lg:grid-rows-1 lg:ml-[5rem] lg:gap-10 lg:h-[550px] max-w-[1250px]'>
+        <div
+            className='flex flex-col items-center lg:grid lg:grid-cols-[1fr,auto,500px] lg:grid-rows-1 lg:ml-[5rem] lg:gap-10 lg:h-[550px] max-w-[1250px]'
+            key={props.keyValue}
+        >
             <Image src={props.landscape} alt={props.name} className='lg:hidden' />
             <Image
                 src={props.portrait}

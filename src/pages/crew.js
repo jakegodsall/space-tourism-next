@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-
 import Head from 'next/head';
 
 import Header from '@/components/Header';
-
 import CrewItem from '@/components/CrewItem';
+import SectionTransition from '@/components/transitions/SectionTransition';
 
 const CREW_DATA = [
     {
@@ -66,23 +65,25 @@ const Crew = () => {
             </Head>
             <div className='w-auto h-screen bg-center bg-cover bg-no-repeat bg-crew-mobile sm:bg-crew-tablet lg:bg-crew-desktop'>
                 <Header />
-                <CrewItem data={selectedData}>
-                    <nav className='flex w-[100px] justify-between'>
-                        {CREW_DATA.map((data, key) => {
-                            return (
-                                <input
-                                    type='radio'
-                                    name='crewMember'
-                                    key={key}
-                                    value={data.accessKey}
-                                    onChange={onChangeHandler}
-                                    className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff] transition-all duration-500'
-                                    defaultChecked={CREW_DATA.indexOf(data) === 0}
-                                />
-                            );
-                        })}
-                    </nav>
-                </CrewItem>
+                <SectionTransition keyValue={selectedData.name}>
+                    <CrewItem data={selectedData} keyValue={selectedData.name}>
+                        <nav className='flex w-[100px] justify-between'>
+                            {CREW_DATA.map((data, key) => {
+                                return (
+                                    <input
+                                        type='radio'
+                                        name='crewMember'
+                                        key={key}
+                                        value={data.accessKey}
+                                        onChange={onChangeHandler}
+                                        className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff] transition-all duration-500'
+                                        defaultChecked={CREW_DATA.indexOf(data) === 0}
+                                    />
+                                );
+                            })}
+                        </nav>
+                    </CrewItem>
+                </SectionTransition>
             </div>
         </>
     );

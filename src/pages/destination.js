@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-
 import Head from 'next/head';
+
 import Header from '@/components/Header';
 import DestinationItem from '@/components/DestinationItem';
-
 import SectionTransition from '@/components/transitions/SectionTransition';
 
 const DEST_DATA = [

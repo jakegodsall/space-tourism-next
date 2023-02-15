@@ -68,16 +68,16 @@ const Crew = () => {
                 <SectionTransition keyValue={selectedData.name}>
                     <CrewItem data={selectedData} keyValue={selectedData.name}>
                         <nav className='flex w-[100px] justify-between'>
-                            {CREW_DATA.map((data, key) => {
+                            {CREW_DATA.map((el, key) => {
                                 return (
                                     <input
                                         type='radio'
                                         name='crewMember'
                                         key={key}
-                                        value={data.accessKey}
+                                        value={el.accessKey}
                                         onChange={onChangeHandler}
+                                        checked={el.accessKey === selectedData.accessKey}
                                         className='appearance-none w-[1rem] h-[1rem] bg-[#555] rounded-full cursor-pointer checked:bg-[#fff] transition-all duration-500'
-                                        defaultChecked={CREW_DATA.indexOf(data) === 0}
                                     />
                                 );
                             })}

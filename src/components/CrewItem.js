@@ -34,19 +34,22 @@ const CrewItem = (props) => {
                         fill
                     ></Image>
                 </div>
-                <div className='h-full w-full px-5 mx-auto flex flex-col items-center text-center md:row-start-1 md:relative md:h-[300px] md:w-[75%] lg:h-full lg:justify-center lg:text-left lg:relative'>
-                    <p className='text-white text-xl uppercase font-barlow tracking-[4px] my-6 md:text-xl md:self-start md:mb-8 hidden lg:block duration-1000 absolute top-0'>
+                <div className='h-full w-full px-5 mx-auto flex flex-col items-center text-center pt-10 md:row-start-1 md:relative md:h-[330px] md:w-[75%] lg:h-full lg:justify-center lg:text-left lg:relative'>
+                    <p className='text-white text-xl uppercase font-barlow tracking-[4px] my-6 md:text-xl md:self-start md:mb-8 hidden lg:block duration-1000 absolute top-0 order-2'>
                         <span className='text-[#888]'>02</span> Meet your crew
                     </p>
-                    <div className='my-6 md:hidden'>{props.children}</div>
-                    <p className='text-[#888] font-bell uppercase text-2xl lg:self-start'>{role}</p>
-                    <p className='text-[#fff] font-bell uppercase text-4xl md:text-5xl my-4 lg:self-start'>
+                    <p className='text-[#888] font-bell uppercase text-2xl lg:self-start order-3'>
+                        {role}
+                    </p>
+                    <p className='text-[#fff] font-bell uppercase text-4xl md:text-5xl my-4 lg:self-start order-4'>
                         {name}
                     </p>
-                    <p className='text-[#d0d6f9] font-barlow text-lg font-light tracking-wider leading-7 text-center lg:text-left'>
+                    <p className='text-[#d0d6f9] font-barlow text-lg font-light tracking-wider leading-7 text-center lg:text-left order-5'>
                         {bio}
                     </p>
-                    <div className='hidden md:block md:absolute bottom-10'>{props.children}</div>
+                    <div className='md:block md:absolute md:bottom-0 order-1 pb-5'>
+                        {props.children}
+                    </div>
                 </div>
             </div>
         </div>

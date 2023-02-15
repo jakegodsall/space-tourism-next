@@ -31,6 +31,7 @@ const CrewItem = (props) => {
                         src={imageSrc}
                         alt={name}
                         className='m-auto object-contain z-'
+                        priority={true}
                         fill
                     ></Image>
                 </div>

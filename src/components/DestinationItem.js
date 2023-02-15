@@ -18,7 +18,13 @@ const DestinationItem = (props) => {
             </p>
             <div className='flex flex-col items-center lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-10'>
                 <div className='min-w-[300px] px-[100px] md:px=[100px] lg:px-5'>
-                    <Image src={props.dest.images.png} alt={name} width={500} height={500}></Image>
+                    <Image
+                        src={props.dest.images.png}
+                        alt={name}
+                        width={500}
+                        height={500}
+                        priority={true}
+                    ></Image>
                 </div>
 
                 <div className='flex flex-col items-center lg:items-start'>

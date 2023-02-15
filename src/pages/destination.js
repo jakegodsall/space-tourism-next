@@ -77,7 +77,7 @@ const Destination = () => {
 
                 <SectionTransition keyValue={data.name}>
                     <DestinationItem dest={data} keyValue={data.name}>
-                        <nav className='w-full'>
+                        <nav className='w-full flex justify-center'>
                             <ul className='flex w-[60%] justify-between my-10'>
                                 {destinationName.map((dest, idx) => {
                                     return (

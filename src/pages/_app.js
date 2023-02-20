@@ -7,7 +7,7 @@ import PageLoadTransition from '@/components/transitions/PageLoadTransition';
 export default function App({ Component, pageProps }) {
     return (
         <PageLoadTransition>
-            <Component {...pageProps} />;
+            <Component {...pageProps} />
         </PageLoadTransition>
     );
 }

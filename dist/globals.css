@@ -2,15 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base {
-  @font-face {}
-  html {
-    @apply w-full h-full;
-  }
-  body {
-    @apply bg-gray-900 w-full h-full;
-  }
-  #__next {
-    @apply w-full h-full;
-  }
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  background-color: red;
+}
+
+#__next {
+  min-height: 100vh;
 }/*# sourceMappingURL=globals.css.map */
